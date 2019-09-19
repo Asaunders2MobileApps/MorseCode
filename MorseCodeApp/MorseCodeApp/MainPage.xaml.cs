@@ -53,7 +53,6 @@ namespace MorseCodeApp
                 //}
 
                 oLetter.Text = oLetter.Text.Equals("") ? Convert.ToString(MorseCoder(input)) : oLetter.Text + Convert.ToString(MorseCoder(input));
-
                 input = "";
             }
             else
@@ -62,14 +61,16 @@ namespace MorseCodeApp
             }
         }
 
-        private void MorseDot(object sender, EventArgs e)
-        {
-            input += Convert.ToString(iDot.Text);
-        }
-        private void MorseDash(object sender, EventArgs e)
-        {
-            input += Convert.ToString(iDash.Text);
-        }
+        //private void MorseDot(object sender, EventArgs e)
+        //{
+        //    input += Convert.ToString(iDot.Text);
+        //}
+        private void MorseDot(object sender, EventArgs e) => input += ".";
+        
+        //private void MorseDash(object sender, EventArgs e)
+        //{
+        //    input += Convert.ToString(iDash.Text);
+        //}
+        private void MorseDash(object sender, EventArgs e) => input += "-";
     }
-}
 }
